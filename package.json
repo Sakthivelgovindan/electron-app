@@ -1,8 +1,8 @@
 {
-  "name": "basic-electron-react-boilerplate",
+  "name": "Workfolio",
   "version": "0.7.0",
-  "description": "Minimal and modern react+electron+webpack boilerplate",
-  "author": "Phillip Barbiero",
+  "description": "Time tracking app.",
+  "author": "Workfolio",
   "homepage": "https://github.com/pbarbiero/basic-electron-react-boilerplate",
   "repository": {
     "type": "git",
@@ -10,9 +10,13 @@
   },
   "license": "MIT",
   "main": "main.js",
+  "build": {
+    "appId": "com.example.workfolio",
+    "productName": "Workfolio"
+  },
   "scripts": {
     "prod": "webpack --config webpack.build.config.js && electron --noDevServer .",
-    "dev": "webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js",
+    "dev": "webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js --disable-gpu",
     "build": "webpack --config webpack.build.config.js",
     "package": "webpack --config webpack.build.config.js",
     "postpackage": "electron-packager ./ --out=./builds"
@@ -34,5 +38,16 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "antd": "^4.9.4",
+    "custom-electron-titlebar": "^3.2.5",
+    "electron-progressbar": "^2.0.0",
+    "moment-timezone": "^0.5.32",
+    "react-compound-timer": "^1.2.0",
+    "react-live-clock": "^5.0.13",
+    "react-moment": "^1.0.0",
+    "react-toggle-button": "^2.2.0",
+    "url": "^0.11.0"
   }
 }
